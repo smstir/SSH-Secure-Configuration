@@ -1,1 +1,26 @@
 # SSH-Secure-Configuration
+SSH or secure shell is a communication protocol used to administer the remote servers securely. We will discuss the following options in the SSH configuration file which impact security.
+-	Ensure default SSH port is changed.
+-	Restrict SSH server to accept the connections from trusted IP addresses only.
+-	Ensure permissions on /etc/ssh/sshd_config are configured
+-	Ensure permissions on SSH private host key files are configured
+-	Ensure permissions on SSH public host key files are configured
+-	Ensure SSH access is limited. Determine AllowUsers or AllowGroups or DenyUsers or DenyGroups 
+-	Ensure SSH LogLevel is appropriate (LogLevel VERBOSE or LogLevel INFO)
+-	Ensure SSH PAM is enabled
+-	Ensure SSH root login is disabled (PermitRootLogin no)
+-	Ensure SSH HostbasedAuthentication is disabled (HostbasedAuthentication no)
+-	Ensure SSH PermitEmptyPasswords is disabled (PermitEmptyPasswords no)
+-	Ensure SSH PermitUserEnvironment is disabled (PermitUserEnvironment no)
+-	Ensure SSH IgnoreRhosts is enabled (IgnoreRhosts yes)
+-	Ensure SSH X11 forwarding is disabled (X11Forwarding no)
+-	Ensure only strong Ciphers are used (AES-256)
+-	Ensure only strong MAC algorithms are used (hmac-sha2-256 or hmac-sha2-512)
+-	Ensure only strong Key Exchange algorithms are used (ecdh-sha2-nistp256, ecdh-sha2-nistp384, ecdh-sha2-nistp521, diffie-hellman-group-exchange-sha256, diffie-hellman-group16-sha512, diffie-hellman-group18-sha512, diffie-hellman-group14-sha256)
+-	Ensure SSH AllowTcpForwarding is disabled (AllowTcpForwarding no)
+-	Ensure SSH warning banner is configured
+-	Ensure SSH MaxAuthTries is set to 4 or less (MaxAuthTries 4)
+-	Ensure SSH MaxStartups is configured (MaxStartups 10:30:60)
+-	Ensure SSH MaxSessions is set to 10 or less (MaxSessions 10)
+-	Ensure SSH LoginGraceTime is set to one minute or less (LoginGraceTime 60)
+-	Ensure SSH Idle Timeout Interval is configured (ClientAliveInterval 60 ClientAliveCountMax 3)
